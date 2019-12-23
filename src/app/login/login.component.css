@@ -1,0 +1,5 @@
+#loginContainer{align-items: center;justify-content: center;background-image:url('../../assets/images/clothesbackdrop.jpg')}
+#loginContainer .login-card{width: 60%;background-color: rgb(86,86,86,0.8);}
+#loginContainer .login-card > div{justify-content: center;}
+#googleBtn{cursor: pointer;align-items: center;padding: 0px 14px 0px 0px;background: #ffffff;border: none;border-radius: 6px;margin: 0 auto;}
+#googleBtn > img {height: 50px;width: 50px;margin-right: 15px;border-radius: 6px;}

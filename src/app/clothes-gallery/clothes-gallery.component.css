@@ -1,0 +1,21 @@
+#galleryContainer{align-items: center;justify-content: center;}
+.cloth-img{
+    height: 50px;
+}
+.container-data{
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+.img-size{
+  max-width: 250px;
+  max-height: 250px;
+}
+::ng-deep .mat-card-header-text{
+  width: 90%;
+  text-align: left;
+}
+.mrl20{
+  margin-left: 20px;
+}

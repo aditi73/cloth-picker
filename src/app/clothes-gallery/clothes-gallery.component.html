@@ -1,0 +1,23 @@
+<div class="inner-container bg-gradient" id="galleryContainer">
+  <div class="container-data">
+    <a routerLink="/upload"><button mat-raised-button >Upload Clothes</button></a>
+    <a *ngIf="wardrobe && wardrobe['favourite'].length"class="mrl20" routerLink="/bookmarks"><button mat-raised-button >View Bookmarks</button></a>
+  </div>
+  <div class="container-data" *ngIf="upper.length && bottom.length">
+    <mat-card class="gallery-card">
+      <mat-card-header>
+        <mat-card-title class="header-data">Today's pick</mat-card-title>
+        <span (click)="wardrobe_fav_dislike('favourite')"><i [ngStyle]="{'color': is_fav_dilike_pair('favourite') ? 'grey' : 'red'}" class="material-icons">favorite</i></span>
+        <span (click)="wardrobe_fav_dislike('dislike')" [ngStyle]="{'color': is_fav_dilike_pair('favourite') ? 'grey' : 'black'}"><i class="material-icons">thumb_down</i></span>
+      </mat-card-header>
+      <div class="gallery-card">
+        <img class="img-size" mat-card-image src = "{{displayUpper.img_url}}" alt = "Upper">
+      </div>
+      <div class="gallery-card">
+        <img class="img-size" mat-card-image src = "{{displayBottom.img_url}}" alt = "Bottom">
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+

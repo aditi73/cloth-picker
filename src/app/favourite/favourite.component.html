@@ -1,0 +1,12 @@
+<div class="inner-container bg-gradient">
+  <div class="container-data" *ngIf="bookmarks.length">
+    <mat-card class="gallery-card" *ngFor="let item of bookmarks">
+      <div class="gallery-card">
+        <img class="img-size" mat-card-image src = "{{item.upper}}" alt = "Upper">
+      </div>
+      <div class="gallery-card">
+        <img class="img-size" mat-card-image src = "{{item.bottom}}" alt = "Bottom">
+      </div>
+    </mat-card>
+  </div>
+</div>

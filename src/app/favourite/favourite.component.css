@@ -1,0 +1,10 @@
+.container-data{
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+.img-size{
+  max-width: 250px;
+  max-height: 250px;
+}

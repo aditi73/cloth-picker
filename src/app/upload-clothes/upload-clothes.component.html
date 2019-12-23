@@ -1,0 +1,26 @@
+<div class="flex inner-container bg-gradient" id="uploadContainer">
+  <mat-card>
+    <mat-card-title>
+      Update your wardrobe
+    </mat-card-title>
+    <form [formGroup]='uploadClothesForm'>
+      <div class="m-t-b-15">
+        <input style="display: none" type="file" (change)="onImageUpload($event)" #fileInput>
+        <div class="image-upload-container flex" (click)="fileInput.click()">
+          <div *ngIf="!uploadClothesForm.controls.image_url.value">+ Upload Image</div>
+          <img *ngIf="uploadClothesForm.controls.image_url.value" [src]="uploadClothesForm.controls.image_url.value" />
+        </div>
+      </div>
+      <mat-select class="m-t-b-15" formControlName="category" [placeholder]="'Please select a category'">
+        <mat-option value="upper">Tops</mat-option>
+        <mat-option value="bottom">Bottoms</mat-option>
+      </mat-select>
+      <button mat-raised-button
+        (click)="addClothes()"
+        class="m-t-b-15"
+        [disabled]="uploadClothesForm.invalid">
+        Save
+      </button>
+    </form>
+  </mat-card>
+</div>
